@@ -1,0 +1,54 @@
+[Eagle]
+Version="08 02 02"
+Platform="Windows"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/e14_BeagleBoneBlack_RevB.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/adafruit.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/bosch.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/components.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/con-molex-mini-fit.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/GeekAmmo.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/headers(2mm).lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/LilyPad-Wearables.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/linx.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/LMZ21700.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/molex_nanofit.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/murata.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/pinhead.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/rcl.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Aesthetics.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-AnalogIC.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Boards.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Capacitors.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Connectors.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-DigitalIC.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-DiscreteSemi.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Displays.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Electromechanical.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-FreqCtrl.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-LED.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Passives.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-PowerIC.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Resistors.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Retired.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-RF.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/SparkFun-Sensors.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/texas.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/TPS40305.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/User-Submitted.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/xbee.lbr"
+UsedLibrary="C:/Users/Gabriel Smolnycki/Dropbox/eagle/orbit/libraries/XTend.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="90 92 2359 1265"
+State=2
+Number=0
+
+[Desktop]
+Screen="6400 1440"
+Window="Win_1"
