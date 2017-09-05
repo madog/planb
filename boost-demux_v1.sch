@@ -11549,15 +11549,15 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" value="1u"/>
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" value="100n"/>
 <part name="U2" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4067" device="D"/>
-<part name="D2" library="SparkFun-LED" deviceset="LED" device="5MM" value="GREEN"/>
-<part name="D3" library="SparkFun-LED" deviceset="LED" device="5MM" value="GREEN"/>
-<part name="D4" library="SparkFun-LED" deviceset="LED" device="5MM" value="GREEN"/>
+<part name="D2" library="SparkFun-LED" deviceset="LED" device="5MM" value="+5V"/>
+<part name="D3" library="SparkFun-LED" deviceset="LED" device="5MM" value="+12V"/>
+<part name="D4" library="SparkFun-LED" deviceset="LED" device="5MM" value="+20V"/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R1206" value="1k"/>
 <part name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R1206" value="1k"/>
 <part name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R1206" value="1k"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="D5" library="SparkFun-LED" deviceset="LED" device="5MM" value="RED"/>
+<part name="D5" library="SparkFun-LED" deviceset="LED" device="5MM" value="ENABLE"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R1206" value="1k"/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
@@ -11603,6 +11603,10 @@ POWER</text>
 <text x="147.32" y="175.26" size="2.54" layer="97">LOGIC ISOLATION</text>
 <text x="2.54" y="68.58" size="2.54" layer="97">ENABLE</text>
 <text x="2.54" y="109.22" size="2.54" layer="97">STOP</text>
+<text x="58.42" y="30.48" size="1.778" layer="97" rot="R90">GREEN</text>
+<text x="68.58" y="30.48" size="1.778" layer="97" rot="R90">GREEN</text>
+<text x="78.74" y="30.48" size="1.778" layer="97" rot="R90">GREEN</text>
+<text x="91.44" y="30.48" size="1.778" layer="97" rot="R90">RED</text>
 </plain>
 <instances>
 <instance part="U3" gate="G$1" x="167.64" y="33.02"/>

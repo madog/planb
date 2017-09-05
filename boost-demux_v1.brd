@@ -166,6 +166,8 @@
 <text x="10.16" y="20.32" size="2.54" layer="21" font="vector" ratio="10" rot="R90" align="top-center">AUX</text>
 <text x="7.62" y="11.43" size="2.54" layer="21" font="vector" ratio="10" rot="R90" align="top-center">EN</text>
 <text x="2.54" y="45.72" size="2.54" layer="21" font="vector" ratio="10" rot="R90" align="center-left">+</text>
+<text x="26.67" y="49.022" size="1.905" layer="21" font="vector" ratio="10" align="bottom-center">HP C6602A
+CONTROLLER V1.0</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -3179,10 +3181,22 @@ Grid 2.54 mm&lt;p&gt;
 <attribute name="NAME" x="43.18" y="27.94" size="1.27" layer="25" rot="R270"/>
 </element>
 <element name="D1" library="components" package="TO-277-3" value="ON_FSV8100V" x="33.02" y="30.48" rot="R180"/>
-<element name="D2" library="SparkFun-LED" package="LED_5MM" value="GREEN" x="60.96" y="50.8"/>
-<element name="D3" library="SparkFun-LED" package="LED_5MM" value="GREEN" x="66.04" y="43.18"/>
-<element name="D4" library="SparkFun-LED" package="LED_5MM" value="GREEN" x="71.12" y="50.8"/>
-<element name="D5" library="SparkFun-LED" package="LED_5MM" value="RED" x="76.2" y="43.18"/>
+<element name="D2" library="SparkFun-LED" package="LED_5MM" value="+5V" x="60.96" y="50.8" smashed="yes">
+<attribute name="NAME" x="60.96" y="54.1909" size="1.27" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="VALUE" x="60.9854" y="47.4091" size="1.27" layer="27" font="vector" ratio="10" align="top-center"/>
+</element>
+<element name="D3" library="SparkFun-LED" package="LED_5MM" value="+12V" x="66.04" y="43.18" smashed="yes">
+<attribute name="NAME" x="66.04" y="46.5709" size="1.27" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="VALUE" x="66.0654" y="39.7891" size="1.27" layer="27" font="vector" ratio="10" align="top-center"/>
+</element>
+<element name="D4" library="SparkFun-LED" package="LED_5MM" value="+20V" x="71.12" y="50.8" smashed="yes">
+<attribute name="NAME" x="71.12" y="54.1909" size="1.27" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="VALUE" x="71.1454" y="47.4091" size="1.27" layer="27" font="vector" ratio="10" align="top-center"/>
+</element>
+<element name="D5" library="SparkFun-LED" package="LED_5MM" value="ENABLE" x="76.2" y="43.18" smashed="yes">
+<attribute name="NAME" x="76.2" y="46.5709" size="1.27" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="VALUE" x="76.2254" y="39.7891" size="1.27" layer="27" font="vector" ratio="10" align="top-center"/>
+</element>
 <element name="D6" library="components" package="TO-277-3" value="ON_FSV8100V" x="59.69" y="36.83" rot="R180"/>
 <element name="L1" library="components" package="4440" value="4.7U" x="33.02" y="41.91" smashed="yes" rot="R270">
 <attribute name="NAME" x="38.52" y="41.91" size="1.25" layer="21" font="vector" ratio="10" rot="R270" align="bottom-center"/>
@@ -3550,9 +3564,9 @@ Grid 2.54 mm&lt;p&gt;
 <wire x1="53.975" y1="3.175" x2="53.34" y2="3.81" width="0.6096" layer="1"/>
 <wire x1="53.34" y1="3.81" x2="53.34" y2="13.208" width="0.6096" layer="1"/>
 <wire x1="53.34" y1="13.208" x2="54.61" y2="14.478" width="0.6096" layer="1"/>
-<wire x1="54.61" y1="14.478" x2="64.008" y2="14.478" width="0.6096" layer="1"/>
-<wire x1="64.008" y1="14.478" x2="64.77" y2="15.24" width="0.6096" layer="1"/>
-<wire x1="64.77" y1="15.24" x2="64.77" y2="20.574" width="0.6096" layer="1"/>
+<wire x1="54.61" y1="14.478" x2="63.754" y2="14.478" width="0.6096" layer="1"/>
+<wire x1="63.754" y1="14.478" x2="64.77" y2="15.494" width="0.6096" layer="1"/>
+<wire x1="64.77" y1="15.494" x2="64.77" y2="20.574" width="0.6096" layer="1"/>
 <wire x1="78.74" y1="26.67" x2="77.47" y2="27.94" width="0.6096" layer="1"/>
 <wire x1="77.47" y1="27.94" x2="73.66" y2="27.94" width="0.6096" layer="1"/>
 <wire x1="73.66" y1="27.94" x2="72.39" y2="29.21" width="0.6096" layer="1"/>
@@ -4022,6 +4036,10 @@ Grid 2.54 mm&lt;p&gt;
 </board>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
