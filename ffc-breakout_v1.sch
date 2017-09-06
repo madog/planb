@@ -678,7 +678,7 @@
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.4064" drill="0.4064">
-<clearance class="0" value="0.127"/>
+<clearance class="0" value="0.2032"/>
 </class>
 </classes>
 <parts>
@@ -707,12 +707,10 @@
 <pinref part="X1" gate="A" pin="16"/>
 <wire x1="58.42" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="45.72" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="17"/>
 <wire x1="71.12" y1="33.02" x2="71.12" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="X3" gate="A" pin="2"/>
 <wire x1="78.74" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="17.78" x2="139.7" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="22.86" x2="50.8" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="22.86" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
@@ -722,7 +720,6 @@
 <junction x="78.74" y="17.78"/>
 <pinref part="SJ2" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="20.32" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<junction x="86.36" y="17.78"/>
 </segment>
 </net>
 <net name="N$2" class="0">
