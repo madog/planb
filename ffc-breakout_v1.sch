@@ -894,6 +894,12 @@
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,54.5677,56.1061,X1,,,,,"/>
+<approved hash="113,1,58.6571,24.3561,X3,,,,,"/>
+<approved hash="113,1,79.6769,33.02,SJ1,,,,,"/>
+<approved hash="113,1,87.2969,25.4,SJ2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
