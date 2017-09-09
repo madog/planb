@@ -16302,6 +16302,7 @@ POWER</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="101,1,10.16,43.18,LOGO1,P$1,,,,"/>
 <approved hash="104,1,30.48,38.1,U2P,VSS,GND,,,"/>
 <approved hash="104,1,30.48,53.34,U2P,VDD,+5V,,,"/>
 <approved hash="208,1,30.48,58.42,+5V,sup,,,,"/>
@@ -16309,8 +16310,7 @@ POWER</text>
 <approved hash="208,1,78.74,71.12,+5V,out,,,,"/>
 <approved hash="208,1,76.2,76.2,+5V,sup,,,,"/>
 <approved hash="208,1,256.54,33.02,+5V,sup,,,,"/>
-<approved hash="208,1,12.7,91.44,+5V,sup,,,,"/>
-<approved hash="208,1,50.8,96.52,+5V,sup,,,,"/>
+<approved hash="208,1,50.8,101.6,+5V,sup,,,,"/>
 <approved hash="113,1,168.91,32.0777,U3,,,,,"/>
 <approved hash="113,1,168.91,82.8777,U4,,,,,"/>
 <approved hash="113,1,224.748,38.3261,X5,,,,,"/>

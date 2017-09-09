@@ -6113,14 +6113,6 @@ Grid 2.54 mm&lt;p&gt;
 </signal>
 </signals>
 <errors>
-<approved hash="2,20,feb244aeaf7f75db"/>
-<approved hash="2,20,fcb7a1fecaf3f7da"/>
-<approved hash="2,20,b0fdfb5d8dfda7e1"/>
-<approved hash="2,20,8efbdfab174c19ec"/>
-<approved hash="2,20,81bc90ac2f4ccfdf"/>
-<approved hash="2,20,977c74e5c57ed660"/>
-<approved hash="2,20,957e9096a0f55542"/>
-<approved hash="2,20,8095b49b8ad27113"/>
 <approved hash="2,20,46b420957698fcd9"/>
 <approved hash="2,20,30fe403687961ae2"/>
 <approved hash="2,20,44b1c5c513147ed8"/>
@@ -6129,6 +6121,30 @@ Grid 2.54 mm&lt;p&gt;
 <approved hash="2,20,d77ebb31c6528a7d"/>
 <approved hash="2,20,ab83d30bf1eba8df"/>
 <approved hash="2,20,d57c5f42a3d9095f"/>
+<approved hash="3,1,40875e855e854087"/>
+<approved hash="3,1,118f118f1f8f1f8f"/>
+<approved hash="3,1,8308833683368308"/>
+<approved hash="3,1,36e330e730e736e3"/>
+<approved hash="3,1,aa2ba82ba82ba82b"/>
+<approved hash="3,1,729c769c769a7696"/>
+<approved hash="3,1,c551c353c353c551"/>
+<approved hash="3,1,ac7db07fb079ae7d"/>
+<approved hash="2,20,feb244aeaf7f75db"/>
+<approved hash="2,20,b0fdfb5d8dfda7e1"/>
+<approved hash="2,20,fcb7a1fecaf3f7da"/>
+<approved hash="2,20,8efbdfab174c19ec"/>
+<approved hash="2,20,977c74e5c57ed660"/>
+<approved hash="2,20,81bc90ac2f4ccfdf"/>
+<approved hash="2,20,957e9096a0f55542"/>
+<approved hash="2,20,8095b49b8ad27113"/>
+<approved hash="2,20,8ff9dfca48ad836e"/>
+<approved hash="2,20,b1fffb3cd21c3d63"/>
+<approved hash="2,20,ffb044cf349e2b59"/>
+<approved hash="2,20,fdb5a19f5112a958"/>
+<approved hash="2,20,557f8136d9d4fdfc"/>
+<approved hash="2,20,90ab753a23f20992"/>
+<approved hash="2,20,577d6545bc5f7ede"/>
+<approved hash="2,20,9182510d866cb75e"/>
 </errors>
 </board>
 </drawing>
