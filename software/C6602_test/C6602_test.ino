@@ -11,7 +11,7 @@ const int aux1 = 46;
 const int aux2 = 47;
 const int aux3 = 48;
 const int aux4 = 49;
-const int enable_pin = 2;
+const int enable_pin = 20;
 
 // Keypad pins
 // Pin connected to latch pin (  ) of 74HC165
@@ -59,9 +59,9 @@ void setup()
   lcd.noCursor();
   lcd.setCursor(0,0);
   lcd.print("C6602 test program");
-  lcd.setCursor(1,0);
+  lcd.setCursor(0,1);
   lcd.print("20V DISABLED");
-  lcd.setCursor(2,0);
+  lcd.setCursor(0,2);
   lcd.print("Nozzle: None");
 }
 
@@ -113,9 +113,9 @@ void loop()
   if(!nEnabled)  // If not
   {
 	  digitalWrite(enable_pin, LOW);  // Turn off 20V output
-	  lcd.setCursor(1,4);             // Update display
-	  lcd.print("DISALBED");
-	  lcd.setCursor(2,8);
+	  lcd.setCursor(4,1);             // Update display
+	  lcd.print("DISABLED");
+	  lcd.setCursor(8,2);
 	  lcd.print("None");
 	  delay(100);						// Short delay
     return;                         // Reloop
@@ -123,25 +123,25 @@ void loop()
   else
   {
     digitalWrite(enable_pin, HIGH); // Turn on 20V output
-	  lcd.setCursor(1,4);             // Update display
-	  lcd.print("ENABLED");
-	  lcd.setCursor(2,8);
+	  lcd.setCursor(4,1);             // Update display
+	  lcd.print("ENABLED ");
+	  lcd.setCursor(8,2);
 	  lcd.print(nNum,DEC);
 	  lcd.print("   ");
   }
   
   // Change nozzle
-  if(switchUp && nNum <= 12)
+  if(switchUp && nNum < 12)
   {
   	nNum++;
-  	lcd.setCursor(2,8);
+  	lcd.setCursor(8,2);
   	lcd.print(nNum,DEC);
   	lcd.print("   ");
   }
   if(switchDown && nNum > 0)
   {
   	nNum--;
-  	lcd.setCursor(2,8);
+  	lcd.setCursor(8,2);
   	lcd.print(nNum,DEC);
   	lcd.print("   ");
   }
@@ -150,7 +150,7 @@ void loop()
   if(switchEnter)
   {
   	PORTL |= nNum;			// Turn on nozzle
-  	delayMicroseconds(5);   // Pulse
+  	delayMicroseconds(50000);   // Pulse
   	PORTL &= B11110000;     // Turn off
   }
   
