@@ -51,14 +51,17 @@ void setup()
   digitalWrite(enable_pin, LOW);
   
   nNum = 0;
-  nEnabled = FALSE;
+  nEnabled = false;
   
   // A little information
   lcd.begin(20, 4);
   lcd.clear();
+  lcd.noCursor();
   lcd.setCursor(0,0);
   lcd.print("C6602 test program");
   lcd.setCursor(1,0);
+  lcd.print("20V DISABLED");
+  lcd.setCursor(2,0);
   lcd.print("Nozzle: None");
 }
 
@@ -71,36 +74,86 @@ void loop()
   // Read each value individually
   for (byte n = 0; n < 8; n++)
   {
-	switch (n)
-	{
-	  case 0:
-		switchMenu3 = !(digitalRead(dataPin));
-		break;
-	  case 1:
-		switchMenu2 = !(digitalRead(dataPin));
-		break;
-	  case 2:
-		switchMenu1 = !(digitalRead(dataPin));
-		break;
-	  case 3:
-		switchUp    = !(digitalRead(dataPin));
-		break;
-	  case 4:
-		switchRight = !(digitalRead(dataPin));
-		break;
-	  case 5:
-		switchEnter = !(digitalRead(dataPin));
-		break;
-	  case 6:
-		switchDown  = !(digitalRead(dataPin));
-		break;
-	  case 7:
-		switchLeft  = !(digitalRead(dataPin));
-		break;
-	}
+  	switch (n)
+  	{
+  	  case 0:
+  		switchMenu3 = !(digitalRead(dataPin));
+  		break;
+  	  case 1:
+  		switchMenu2 = !(digitalRead(dataPin));
+  		break;
+  	  case 2:
+  		switchMenu1 = !(digitalRead(dataPin));
+  		break;
+  	  case 3:
+  		switchUp    = !(digitalRead(dataPin));
+  		break;
+  	  case 4:
+  		switchRight = !(digitalRead(dataPin));
+  		break;
+  	  case 5:
+  		switchEnter = !(digitalRead(dataPin));
+  		break;
+  	  case 6:
+  		switchDown  = !(digitalRead(dataPin));
+  		break;
+  	  case 7:
+  		switchLeft  = !(digitalRead(dataPin));
+  		break;
+  	}
     digitalWrite(clockPin, HIGH);
     digitalWrite(clockPin, LOW);
   }
   
-  if()
+  // Enable 20V output
+  if(switchMenu1)
+    nEnabled = !nEnabled;
+  
+  // Check if we should be doing anything
+  if(!nEnabled)  // If not
+  {
+	  digitalWrite(enable_pin, LOW);  // Turn off 20V output
+	  lcd.setCursor(1,4);             // Update display
+	  lcd.print("DISALBED");
+	  lcd.setCursor(2,8);
+	  lcd.print("None");
+	  delay(100);						// Short delay
+    return;                         // Reloop
+  }
+  else
+  {
+    digitalWrite(enable_pin, HIGH); // Turn on 20V output
+	  lcd.setCursor(1,4);             // Update display
+	  lcd.print("ENABLED");
+	  lcd.setCursor(2,8);
+	  lcd.print(nNum,DEC);
+	  lcd.print("   ");
+  }
+  
+  // Change nozzle
+  if(switchUp && nNum <= 12)
+  {
+  	nNum++;
+  	lcd.setCursor(2,8);
+  	lcd.print(nNum,DEC);
+  	lcd.print("   ");
+  }
+  if(switchDown && nNum > 0)
+  {
+  	nNum--;
+  	lcd.setCursor(2,8);
+  	lcd.print(nNum,DEC);
+  	lcd.print("   ");
+  }
+  
+  // Pulse nozzle
+  if(switchEnter)
+  {
+  	PORTL |= nNum;			// Turn on nozzle
+  	delayMicroseconds(5);   // Pulse
+  	PORTL &= B11110000;     // Turn off
+  }
+  
+  // Short delay before reloop
+  delay(100);
 }
