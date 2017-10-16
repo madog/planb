@@ -40,7 +40,7 @@ void setup()
   lcd.setCursor(0,1);
   lcd.print("Pump: STOPPED");
   lcd.setCursor(0,2);
-  lcd.print("Time: 00.000s");
+  lcd.print("Time: 00000ms");
 }
 
 void loop()
@@ -133,5 +133,5 @@ void loop()
   lcd.print(time_pump,DEC);
   
   // Short delay before reloop
-  delay(100);
+  delay(200);
 }
