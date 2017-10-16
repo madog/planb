@@ -13,16 +13,12 @@ const int aux3 = 48;
 const int aux4 = 49;
 const int enable_pin = 20;
 
-// Keypad pins
-// Pin connected to latch pin (  ) of 74HC165
+// Keypad pins (74HC165 based)
 const int latchPin = 35;
-// Pin connected to data pin (CP) of 74HC165
 const int dataPin = 34;
-// Pin connected to clock pin (  ) of 74HC165
 const int clockPin = 43;
 
 // Input variables
-boolean bitValue;
 boolean switchUp, switchDown, switchLeft, switchRight, switchEnter, switchMenu1, switchMenu2, switchMenu3;
 
 // Others
