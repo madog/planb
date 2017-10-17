@@ -1,5 +1,5 @@
 [Eagle]
-Version="08 03 01"
+Version="08 04 00"
 Platform="Windows"
 Globals="Globals"
 Desktop="Desktop"
@@ -382,8 +382,8 @@ UsedLibrary="libraries/User-Submitted.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="2551 -9 5110 1351"
-State=1
+Loc="361 147 2315 1195"
+State=2
 Number=0
 
 [Desktop]
