@@ -15330,6 +15330,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="M3" library="components" deviceset="6-32_MOUNT" device=""/>
 <part name="M4" library="components" deviceset="6-32_MOUNT" device=""/>
 <part name="LOGO1" library="components" deviceset="MADOG" device=""/>
+<part name="D7" library="SparkFun-LED" deviceset="LED" device="5MM" value="ACTIVITY"/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:26062/1" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -15345,6 +15348,7 @@ POWER</text>
 <text x="68.58" y="30.48" size="1.778" layer="97" rot="R90">GREEN</text>
 <text x="78.74" y="30.48" size="1.778" layer="97" rot="R90">GREEN</text>
 <text x="91.44" y="30.48" size="1.778" layer="97" rot="R90">RED</text>
+<text x="203.2" y="7.62" size="1.778" layer="97">YELLOW</text>
 </plain>
 <instances>
 <instance part="U3" gate="G$1" x="167.64" y="33.02"/>
@@ -15418,6 +15422,9 @@ POWER</text>
 <instance part="M3" gate="G$1" x="220.98" y="116.84"/>
 <instance part="M4" gate="G$1" x="220.98" y="111.76"/>
 <instance part="LOGO1" gate="G$1" x="12.7" y="43.18"/>
+<instance part="D7" gate="G$1" x="208.28" y="15.24" rot="R270"/>
+<instance part="P+7" gate="VCC" x="215.9" y="20.32"/>
+<instance part="R12" gate="G$1" x="195.58" y="15.24"/>
 </instances>
 <busses>
 </busses>
@@ -15753,6 +15760,12 @@ POWER</text>
 <pinref part="X5" gate="A" pin="13"/>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
 <wire x1="220.98" y1="30.48" x2="205.74" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+7" gate="VCC" pin="VCC"/>
+<wire x1="215.9" y1="17.78" x2="215.9" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="D7" gate="G$1" pin="A"/>
+<wire x1="215.9" y1="15.24" x2="210.82" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -16201,6 +16214,20 @@ POWER</text>
 <pinref part="D5" gate="G$1" pin="A"/>
 <wire x1="93.98" y1="30.48" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
 <label x="93.98" y="33.02" size="1.905" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="11"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="15.24" x2="190.5" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$42" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="D7" gate="G$1" pin="C"/>
+<wire x1="200.66" y1="15.24" x2="203.2" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
