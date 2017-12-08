@@ -11,7 +11,7 @@ const int aux1 = 46;
 const int aux2 = 47;
 const int aux3 = 48;
 const int aux4 = 49;
-const int enable_pin = 20;
+const int enable_pin = 2;
 
 // Keypad pins (74HC165 based)
 const int latchPin = 35;
