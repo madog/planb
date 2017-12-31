@@ -11,7 +11,7 @@ const int aux1 = 46;
 const int aux2 = 47;
 const int aux3 = 48;
 const int aux4 = 49;
-const int enable_pin = 2;
+const int enable_pin = 10;
 
 // Keypad pins (74HC165 based)
 const int latchPin = 35;
@@ -146,7 +146,7 @@ void loop()
   if(switchEnter)
   {
   	PORTL |= nNum;			// Turn on nozzle
-  	delayMicroseconds(50000);   // Pulse
+  	delayMicroseconds(5);   // Pulse
   	PORTL &= B11110000;     // Turn off
   }
   

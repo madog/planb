@@ -4,10 +4,10 @@ and making steps should only be done by calling the functions, not manually, oth
 */
 
 // motor settings
-const boolean invert_X = 0;
-const boolean invert_Y = 1;
+const boolean invert_X = 1;
+const boolean invert_Y = 0;
 const boolean invert_S = 1;
-const boolean invert_F1 = 0;
+const boolean invert_F1 = 1;
 const boolean invert_F2 = 1;
 const boolean invert_B = 1;
 

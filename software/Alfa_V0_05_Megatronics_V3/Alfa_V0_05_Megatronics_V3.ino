@@ -136,11 +136,11 @@ const int aux1 = 46;
 const int aux2 = 47;
 const int aux3 = 48;
 const int aux4 = 49;
-const int nozzle_power_safety = 2;
+const int nozzle_power_safety = 10;
 
 //heating
-const int B_sens = A15;
-const int Bed_heater = 10;
+const int B_sens = A13;
+const int Bed_heater = 8;
 
 
 
@@ -361,6 +361,9 @@ void setup()
   clear_export_buffer();
   clear_nozzle_history();
   clear_nozzle_stated();
+
+  // initialize serial communication at 9600 bits per second
+  Serial.begin(9600);
 
   Disable_All();
 }
