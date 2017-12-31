@@ -125,14 +125,20 @@ void loop()
     digitalWrite(enable_pin, HIGH); // Turn on 20V output
     lcd.setCursor(4,1);             // Update display
     lcd.print("ENABLED ");
-    delay(100);                     // Short delay to debounce
   }
 
+  // Reset purge volume
+  if (switchMenu2)
+  {
+    nL_purged = 0;
+    lcd.setCursor(4,3);
+    lcd.print("0               ");
+  }
+  
   // Purge on/off
   if (switchEnter && enabled)
   {
     purge = !purge;
-    delay(100);                     // Short delay to debounce
   }
   
   if (purge)
@@ -146,18 +152,20 @@ void loop()
       }
       delayMicroseconds(728);
     }
-    nL_purged += 160;               // 160nL = 1000 drops * 160pL/drop
+    nL_purged += 1920;              // 1920nL = 12000 drops * 160pL/drop
     lcd.setCursor(8,2);
     lcd.print("purging");
     lcd.setCursor(4,3);
     lcd.print(nL_purged, DEC);
-    delay(100);
+    return;                         // Reloop
   }
   else
   {
     lcd.setCursor(8,2);
     lcd.print("ready   ");
+    delay(400);
   }
+  delay(100);                     // Short delay to debounce
 }
 
 void pulseNozzle (int n)
