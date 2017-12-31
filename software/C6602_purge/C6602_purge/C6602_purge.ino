@@ -24,6 +24,7 @@ boolean switchUp, switchDown, switchLeft, switchRight, switchEnter, switchMenu1,
 // Others
 boolean enabled;
 boolean purge;
+unsigned long nL_purged;
 
 void setup()
 {
@@ -48,6 +49,7 @@ void setup()
   
   enabled = false;
   purge = false;
+  nL_purged = 0;
   
   // A little information
   lcd.begin(20, 4);
@@ -59,6 +61,8 @@ void setup()
   lcd.print("20V DISABLED");
   lcd.setCursor(0,2);
   lcd.print("Status: idle");
+  lcd.setCursor(0,3);
+  lcd.print("nL: 0");
 }
 
 void loop()
@@ -133,13 +137,21 @@ void loop()
   
   if (purge)
   {
-    // Pulse all nozzles 100 times
-    for (int i = 0; i < 1200; i++)
+    // Pulse all nozzles 1000 times
+    for (int i = 0; i < 1000; i++)
     {
-      pulseNozzle((i % 12) + 1);
+      for (int j = 0; j < 12; j++)
+      {
+        pulseNozzle((j % 12) + 1);
+      }
+      delayMicroseconds(728);
     }
+    nL_purged += 160;               // 160nL = 1000 drops * 160pL/drop
     lcd.setCursor(8,2);
     lcd.print("purging");
+    lcd.setCursor(4,3);
+    lcd.print(nL_purged, DEC);
+    delay(100);
   }
   else
   {
