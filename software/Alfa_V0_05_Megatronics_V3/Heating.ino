@@ -131,14 +131,20 @@ int update_temperature()
   if (build_sensor_temperature < 0 && build_sensor_temperature > 100)
   {
     digitalWrite(Bed_heater, 0);
+    digitalWrite(Feed1_heater, 0);
+    digitalWrite(Feed2_heater, 0);
   }
   else if (build_sensor_temperature < build_set_temperature)
   {
     digitalWrite(Bed_heater, 1);
+    digitalWrite(Feed1_heater, 1);
+    digitalWrite(Feed2_heater, 1);
   }
   else
   {
     digitalWrite(Bed_heater, 0);
+    digitalWrite(Feed1_heater, 0);
+    digitalWrite(Feed2_heater, 0);
   }
 
   //return build_sensor_temperature;

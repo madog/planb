@@ -141,6 +141,8 @@ const int nozzle_power_safety = 10;
 //heating
 const int B_sens = A13;
 const int Bed_heater = 8;
+const int Feed1_heater = 2;
+const int Feed2_heater = 9;
 
 
 
